@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.7 on win32)" generated="2024-05-14T22:55:08.936012" rpa="false" schemaversion="5">
+<suite id="s1" name="PageObject" source="C:\ORANGE\Tests\PageObject.robot">
+<test id="s1-t1" name="authentificationko" line="21">
+<kw name="openpage" owner="comun">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-14T22:55:10.768887" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-14T22:55:10.768887" elapsed="201.618486"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-14T22:58:32.387373" elapsed="0.333999"/>
+</kw>
+<status status="PASS" start="2024-05-14T22:55:10.768887" elapsed="201.953485"/>
+</kw>
+<kw name="loginko" owner="authentification">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${user}</arg>
+<arg>timeout=20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-14T22:58:32.724374" elapsed="6.713564"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-14T22:58:39.437938" level="INFO">Typing text 'zdazd' into text field 'xpath://input[@name='username']'.</msg>
+<arg>${user}</arg>
+<arg>zdazd</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-14T22:58:39.437938" elapsed="2.341912"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${password}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-14T22:58:41.779850" elapsed="0.095238"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-05-14T22:58:41.876088" level="INFO">Typing password into text field 'xpath://input[@name='password']'.</msg>
+<msg time="2024-05-14T22:58:41.946107" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${password}</arg>
+<arg>orange</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-14T22:58:41.875088" elapsed="0.479726"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-14T22:58:42.354814" level="INFO">Clicking button 'xpath://button[@type='submit']'.</msg>
+<arg>${seconnecter}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-14T22:58:42.354814" elapsed="0.901218"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Invalid credentials</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-05-14T22:58:43.256032" elapsed="3.439085"/>
+</kw>
+<status status="PASS" start="2024-05-14T22:58:32.723372" elapsed="13.972746"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-14T22:58:46.697117" elapsed="2.866180"/>
+</kw>
+<doc>login mot de passe et user invalide</doc>
+<tag>user_password_invalid</tag>
+<status status="PASS" start="2024-05-14T22:55:10.768887" elapsed="218.794410"/>
+</test>
+<status status="PASS" start="2024-05-14T22:55:08.951636" elapsed="220.611661"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">user_password_invalid</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="PageObject">PageObject</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

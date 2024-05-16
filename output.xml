@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.7 on win32)" generated="2024-05-14T09:41:06.045907" rpa="false" schemaversion="5">
+<suite id="s1" name="PageObject" source="c:\orange\Tests\PageObject.robot">
+<test id="s1-t1" name="login" line="7">
+<kw name="openpage" owner="comun">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-14T09:41:10.808834" level="INFO">Opening browser 'chrome' to base url '"https://opensource-demo.orangehrmlive.com/"'.</msg>
+<msg time="2024-05-14T09:51:13.560115" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000020FC5392B90&gt;: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/52e7b9f17a5e3ee279a1076fe0422dc0/screenshot</msg>
+<msg time="2024-05-14T09:51:18.368999" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000020FC9195DD0&gt;: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/52e7b9f17a5e3ee279a1076fe0422dc0/screenshot</msg>
+<msg time="2024-05-14T09:51:22.910679" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000020FC5392F50&gt;: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/52e7b9f17a5e3ee279a1076fe0422dc0/screenshot</msg>
+<msg time="2024-05-14T09:51:27.759283" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=57646): Max retries exceeded with url: /session/52e7b9f17a5e3ee279a1076fe0422dc0/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000020FC5391C50&gt;: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée'))</msg>
+<msg time="2024-05-14T09:51:27.764232" level="FAIL">ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None))</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2024-05-14T09:41:10.808834" elapsed="617.705414">ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None))</status>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2024-05-14T09:51:28.514248" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${user}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-05-14T09:51:28.514248" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-05-14T09:41:10.784122" elapsed="617.730126">ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None))</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${user}</arg>
+<arg>admin</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-14T09:51:28.514248" elapsed="0.015625"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<arg>${password}</arg>
+<arg>admin123</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-05-14T09:51:28.529873" elapsed="0.000000"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<arg>OrangeHRM</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="NOT RUN" start="2024-05-14T09:51:28.529873" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-05-14T09:51:28.529873" elapsed="0.000000"/>
+</kw>
+<doc>authentification ok</doc>
+<tag>authentification</tag>
+<status status="FAIL" start="2024-05-14T09:41:10.784122" elapsed="617.745751">ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None))</status>
+</test>
+<status status="FAIL" start="2024-05-14T09:41:06.259125" elapsed="622.296358"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">authentification</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="PageObject">PageObject</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-05-14T09:41:10.721475" level="WARN">Imported resource file 'c:\orange\Ressources\Keywords\authentification.robot' is empty.</msg>
+<msg time="2024-05-14T09:51:13.560115" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000020FC5392B90&gt;: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/52e7b9f17a5e3ee279a1076fe0422dc0/screenshot</msg>
+<msg time="2024-05-14T09:51:18.368999" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000020FC9195DD0&gt;: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/52e7b9f17a5e3ee279a1076fe0422dc0/screenshot</msg>
+<msg time="2024-05-14T09:51:22.910679" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000020FC5392F50&gt;: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée')': /session/52e7b9f17a5e3ee279a1076fe0422dc0/screenshot</msg>
+<msg time="2024-05-14T09:51:27.759283" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=57646): Max retries exceeded with url: /session/52e7b9f17a5e3ee279a1076fe0422dc0/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000020FC5391C50&gt;: Failed to establish a new connection: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée'))</msg>
+</errors>
+</robot>
