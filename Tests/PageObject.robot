@@ -3,6 +3,7 @@ Library    SeleniumLibrary
 Resource    ../Ressources/Keywords/authentification.robot
 Resource    ../Ressources/Keywords/comun.robot
 Resource    ../Ressources//Keywords/authentification.robot
+Resource    ../Ressources/Keywords/ajoutuser.robot
 
 *** Test Cases ***
 authentificationok
@@ -24,6 +25,14 @@ authentificationko
     openpage
     loginko
     Close Browser
+adduser
+    [Documentation]    ajouter un utilisateur
+    [Tags]    utilisateur
+    openpage
+    login
+    ajoutuser
+    Close Browser
+
 
 
     
