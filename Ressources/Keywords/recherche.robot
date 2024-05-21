@@ -67,8 +67,12 @@ suprimer
     ${usern}    Get Text     ${usernameresultat}
     ${userr}    Get Text    ${userroleresultat}
     ${userst}    Get Text    ${staturesultat}
+<<<<<<< HEAD
     ${emp}      Get Text    ${employerresultat}
     Wait Until Element Is Visible    ${userdel}
+=======
+    ${emp}     Get Text    ${employerresultat}
+>>>>>>> 7bc7ce97fae58db6c53df89fcdbfefb5c851bf7b
     Click Button    ${userdel}
     Wait Until Element Is Enabled    ${confirmationsupr}
     Click Button    ${confirmationsupr}
