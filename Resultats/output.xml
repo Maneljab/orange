@@ -1,257 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.7 on win32)" generated="2024-05-17T14:40:10.733404" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.11.7 on win32)" generated="2024-05-20T11:40:22.800208" rpa="false" schemaversion="5">
 <suite id="s1" name="PageObject" source="C:\ORANGE\Tests\PageObject.robot">
-<test id="s1-t1" name="adduser" line="28">
-<kw name="openpage" owner="comun">
+<test id="s1-t1" name="Quitter" line="29">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-05-17T14:40:13.895236" level="INFO">Opening browser 'Chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
-<arg>${url}</arg>
-<arg>${browser}</arg>
+<msg time="2024-05-20T11:41:02.033822" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
+<msg time="2024-05-20T11:43:46.200785" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2024-05-20T11:43:46.210639" level="FAIL">TimeoutException: Message: Failed to read marionette port
+</msg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-05-17T14:40:13.895236" elapsed="103.528376"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-05-17T14:41:57.423612" elapsed="0.415892"/>
-</kw>
-<status status="PASS" start="2024-05-17T14:40:13.895236" elapsed="103.944268"/>
+<status status="FAIL" start="2024-05-20T11:41:02.033822" elapsed="164.642988">TimeoutException: Message: Failed to read marionette port
+</status>
 </kw>
 <kw name="login" owner="authentification">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${user}</arg>
-<arg>timeout=20</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-17T14:41:57.855130" elapsed="7.934108"/>
+<status status="NOT RUN" start="2024-05-20T11:43:46.698669" elapsed="0.000000"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-05-17T14:42:05.789238" level="INFO">Typing text 'admin' into text field 'xpath://input[@name='username']'.</msg>
-<arg>${user}</arg>
-<arg>${administareur}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-17T14:42:05.789238" elapsed="2.223526"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${password}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-17T14:42:08.012764" elapsed="0.041198"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-05-17T14:42:08.053962" level="INFO">Typing password into text field 'xpath://input[@name='password']'.</msg>
-<msg time="2024-05-17T14:42:08.132091" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>${password}</arg>
-<arg>${motpass}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-17T14:42:08.053962" elapsed="0.708187"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${seconnecter}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-17T14:42:08.762149" elapsed="0.085122"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-05-17T14:42:08.847271" level="INFO">Clicking button 'xpath://button[@type='submit']'.</msg>
-<arg>${seconnecter}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-17T14:42:08.847271" elapsed="2.684189"/>
-</kw>
-<kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2024-05-17T14:42:11.704520" level="INFO">Page title is 'OrangeHRM'.</msg>
-<arg>OrangeHRM</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2024-05-17T14:42:11.531460" elapsed="0.173060"/>
-</kw>
-<status status="PASS" start="2024-05-17T14:41:57.839504" elapsed="13.865016"/>
-</kw>
-<kw name="ajoutuser" owner="ajoutuser">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${admin}</arg>
-<arg>timeout=20</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-17T14:42:11.704520" elapsed="0.975600"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-17T14:42:12.680120" level="INFO">Clicking element 'xpath://a[contains(@href, "index.php/admin/viewAdminModule")]'.</msg>
-<arg>${admin}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-17T14:42:12.680120" elapsed="3.451966"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${userplus}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-17T14:42:16.133087" elapsed="0.497857"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-05-17T14:42:16.630944" level="INFO">Clicking element 'xpath://button[@type='button' and contains(concat(' ', @class, ' '), ' oxd-button ') and contains(concat(' ', @class, ' '), ' oxd-button--medium ') and contains(concat(' ', @class, ' '), ' oxd-button--secondary ')]'.</msg>
-<arg>${userplus}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-05-17T14:42:16.630944" elapsed="1.121922"/>
-</kw>
-<kw name="Get File" owner="OperatingSystem">
-<msg time="2024-05-17T14:42:17.753866" level="INFO" html="true">Getting file '&lt;a href="file://C:\orange\Ressources\JDD\listeuser.csv"&gt;C:\orange\Ressources\JDD\listeuser.csv&lt;/a&gt;'.</msg>
-<msg time="2024-05-17T14:42:17.772628" level="INFO">${file_content} = role,statut,employer,usernom,mot de passse
-Admin,Enabled,Test 71 FanchesFanshes,ali,123456sdq
-</msg>
-<var>${file_content}</var>
-<arg>C:\\orange\\Ressources\\JDD\\listeuser.csv</arg>
-<doc>Returns the contents of a specified file.</doc>
-<status status="PASS" start="2024-05-17T14:42:17.753866" elapsed="0.018762"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-05-17T14:42:17.790603" level="INFO">${table} = [['Admin', 'Enabled', 'Test 71 FanchesFanshes', 'ali', '123456sdq']]</msg>
-<var>${table}</var>
-<arg>[line.split(',') for line in $file_content.splitlines()[1:]]</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-05-17T14:42:17.773649" elapsed="0.016954"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-05-17T14:42:17.791622" level="INFO">${role} = Admin</msg>
-<var>${role}</var>
-<arg>${row}[0]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-05-17T14:42:17.791622" elapsed="0.000000"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-05-17T14:42:17.792621" level="INFO">${stat} = Enabled</msg>
-<var>${stat}</var>
-<arg>${row}[1]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-05-17T14:42:17.791622" elapsed="0.000999"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-05-17T14:42:17.832116" level="INFO">${emlpoyer} = Test 71 FanchesFanshes</msg>
-<var>${emlpoyer}</var>
-<arg>${row}[2]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-05-17T14:42:17.830476" elapsed="0.002656"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-05-17T14:42:17.839115" level="INFO">${usernom} = ali</msg>
-<var>${usernom}</var>
-<arg>${row}[3]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-05-17T14:42:17.839115" elapsed="0.000000"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-05-17T14:42:17.852560" level="INFO">${motdepass} = 123456sdq</msg>
-<var>${motdepass}</var>
-<arg>${row[4]}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-05-17T14:42:17.840121" elapsed="0.013440"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${userrole}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-05-17T14:42:17.857567" elapsed="0.340686"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-05-17T14:42:18.198253" level="INFO">xpath://form[@class='oxd-form']//div[@class='oxd-select-text-input']</msg>
-<arg>${userrole}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-05-17T14:42:18.198253" elapsed="0.000000"/>
-</kw>
-<kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2024-05-17T14:42:18.210477" level="INFO">Selecting options from selection list 'xpath://form[@class='oxd-form']//div[@class='oxd-select-text-input']' by label Admin.</msg>
-<msg time="2024-05-17T14:42:18.737295" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-74.png"&gt;&lt;img src="selenium-screenshot-74.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-05-17T14:42:18.737295" level="FAIL">List with locator 'xpath://form[@class='oxd-form']//div[@class='oxd-select-text-input']' not found.</msg>
-<arg>${userrole}</arg>
-<arg>${role}</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="FAIL" start="2024-05-17T14:42:18.198253" elapsed="0.686200">List with locator 'xpath://form[@class='oxd-form']//div[@class='oxd-select-text-input']' not found.</status>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${userstatut}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2024-05-17T14:42:18.884453" elapsed="0.000000"/>
-</kw>
-<kw name="Select From List By Label" owner="SeleniumLibrary">
-<arg>${userstatut}</arg>
-<arg>${stat}</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="NOT RUN" start="2024-05-17T14:42:18.884453" elapsed="0.000000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${employername}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2024-05-17T14:42:18.884453" elapsed="0.000000"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<arg>${employername}</arg>
-<arg>${emlpoyer}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-05-17T14:42:18.884453" elapsed="0.000000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${username}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2024-05-17T14:42:18.884453" elapsed="0.000000"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<arg>${username}</arg>
-<arg>${usernom}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-05-17T14:42:18.884453" elapsed="0.000000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${userpassword}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2024-05-17T14:42:18.884453" elapsed="0.000000"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<arg>${userpassword}</arg>
-<arg>${motdepass}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-05-17T14:42:18.884453" elapsed="0.000000"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<arg>${userconfirmpassword}</arg>
-<arg>${motdepass}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-05-17T14:42:18.884453" elapsed="0.000000"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<arg>${usersave}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-05-17T14:42:18.884453" elapsed="0.000000"/>
-</kw>
-<kw name="Alert Should Be Present" owner="SeleniumLibrary">
-<doc>Verifies that an alert is present and by default, accepts it.</doc>
-<status status="NOT RUN" start="2024-05-17T14:42:18.884453" elapsed="0.000000"/>
-</kw>
-<var name="${row}">['Admin', 'Enabled', 'Test 71 FanchesFanshes', 'ali', '123456sdq']</var>
-<status status="FAIL" start="2024-05-17T14:42:17.791622" elapsed="1.092831">List with locator 'xpath://form[@class='oxd-form']//div[@class='oxd-select-text-input']' not found.</status>
-</iter>
-<var>${row}</var>
-<value>@{table}</value>
-<status status="FAIL" start="2024-05-17T14:42:17.790603" elapsed="1.093850">List with locator 'xpath://form[@class='oxd-form']//div[@class='oxd-select-text-input']' not found.</status>
-</for>
-<tag>utilisateur</tag>
-<doc>ajouter un utilisateur</doc>
-<status status="FAIL" start="2024-05-17T14:42:11.704520" elapsed="7.179933">List with locator 'xpath://form[@class='oxd-form']//div[@class='oxd-select-text-input']' not found.</status>
+<kw name="deconnexion" owner="authentification">
+<status status="NOT RUN" start="2024-05-20T11:43:46.698669" elapsed="0.000000"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="NOT RUN" start="2024-05-17T14:42:18.884453" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-05-20T11:43:46.698669" elapsed="0.000000"/>
 </kw>
-<doc>ajouter un utilisateur</doc>
-<tag>utilisateur</tag>
-<status status="FAIL" start="2024-05-17T14:40:13.895236" elapsed="124.989217">List with locator 'xpath://form[@class='oxd-form']//div[@class='oxd-select-text-input']' not found.</status>
+<doc>deconnexion de l'application</doc>
+<tag>EXIT</tag>
+<status status="FAIL" start="2024-05-20T11:41:02.033822" elapsed="164.664847">TimeoutException: Message: Failed to read marionette port
+</status>
 </test>
-<status status="FAIL" start="2024-05-17T14:40:10.749024" elapsed="128.135429"/>
+<status status="FAIL" start="2024-05-20T11:40:22.808203" elapsed="203.967989"/>
 </suite>
 <statistics>
 <total>
 <stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">utilisateur</stat>
+<stat pass="0" fail="1" skip="0">EXIT</stat>
 </tag>
 <suite>
 <stat pass="0" fail="1" skip="0" id="s1" name="PageObject">PageObject</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-05-17T14:40:13.895236" level="ERROR">Error in file 'C:\ORANGE\Ressources\Keywords\ajoutuser.robot' on line 7: Invalid resource file extension '.csv'. Supported extensions are '.json', '.resource', '.rest', '.robot', '.rsrc', '.rst', '.tsv' and '.txt'.</msg>
+<msg time="2024-05-20T11:41:02.025862" level="ERROR">Error in file 'C:\ORANGE\Ressources\Keywords\ajoutuser.robot' on line 7: Invalid resource file extension '.csv'. Supported extensions are '.json', '.resource', '.rest', '.robot', '.rsrc', '.rst', '.tsv' and '.txt'.</msg>
 </errors>
 </robot>

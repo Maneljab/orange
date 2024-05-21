@@ -28,4 +28,11 @@ loginko
     Input Password    ${password}     orange
     Click Button    ${seconnecter}
     Wait Until Page Contains    Invalid credentials
+deconnexion
+    Wait Until Element Is Visible    ${profil}
+    Click Element    ${profil}
+    Wait Until Element Is Visible    ${logout}
+    Click Element    ${logout}      
+
+    
     

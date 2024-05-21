@@ -5,8 +5,7 @@ Library    Collections
 Variables    ../Locators/acceuil.py
 Variables    ../Locators/user.py
 Resource     ../JDD/listeuser.csv
-*** Variables ***
-${option_xpath}        //form[@class='oxd-form']//div[@class='oxd-select-text-input']//div[@text()='ESS']  
+ 
 *** Keywords ***
 ajoutuser
     [Documentation]    ajouter un utilisateur
@@ -25,9 +24,11 @@ ajoutuser
       ${motdepass}=       Set Variable     ${row[4]}
       Wait Until Element Is Visible    ${userrole}
       Log    ${userrole}
-      Select From List By Label    ${userrole}    ${role}
-      Wait Until Element Is Visible     ${userstatut}
-      Select From List By Label      ${userstatut}     ${stat}
+      Click Element     ${userrole}
+      #Wait Until Element Is Visible       //form[@class='oxd-form']//div[@class='oxd-select-text oxd-select-text--active']//div[@class='oxd-select-text-input' and contains(text(), 'ESS')]'
+      #Execute JavaScript    document.evaluate("//form[@class='oxd-form']//div[@class='oxd-select-text oxd-select-text--active']//div[@class='oxd-select-text-input' and contains(text(), 'ESS')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click();
+      #Wait Until Element Is Visible     ${userstatut}
+      #Select From List By Label      ${userstatut}     ${stat}
       Wait Until Element Is Visible    ${employername}
       Input Text    ${employername}     ${emlpoyer}
       Wait Until Element Is Visible    ${username}
