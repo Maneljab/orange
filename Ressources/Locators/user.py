@@ -22,6 +22,6 @@ userroleresultat='xpath://*[@class="oxd-table-body"]//*[@class="oxd-table-card"]
 employerresultat='xpath://*[@class="oxd-table-body"]//*[@class="oxd-table-card"]//*[@class="oxd-table-cell oxd-padding-cell"][4]'
 staturesultat='xpath://*[@class="oxd-table-body"]//*[@class="oxd-table-card"]//*[@class="oxd-table-cell oxd-padding-cell"][5]'
 #supression
-userdel="xpath://button[@type='button' and @class='oxd-icon-button oxd-table-cell-action-space']//class='oxd-icon bi-trash'"
-
+userdel="xpath://button[@type='button' and @class='oxd-icon-button oxd-table-cell-action-space']//*[@class='oxd-icon bi-trash']"
+confirmationsupr=  "xpath ://button[@type='button' and @class='oxd-button oxd-button--medium oxd-button--label-danger orangehrm-button-margin']"
 
