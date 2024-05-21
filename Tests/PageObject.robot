@@ -56,6 +56,13 @@ Search
     login
     Search_user
     Close Browser
+Delete
+    [Documentation]    supresion utilisateur
+    [Tags]    supression
+    openpage
+    login
+    suprimer
+    Close Browser
     
  
 

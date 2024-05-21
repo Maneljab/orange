@@ -62,3 +62,16 @@ Search_user
         Run Keyword If    '${row_found}' == ''  
              Fail    
     END
+suprimer
+    ${rows}    Get WebElements    ${tabresultat}
+    ${usern}    Get Text     ${usernameresultat}
+    ${userr}    Get Text    ${userroleresultat}
+    ${userst}    Get Text    ${staturesultat}
+    ${emp}      Get Text    ${employerresultat}
+    Wait Until Element Is Visible    ${userdel}
+    Click Button    ${userdel}
+    Wait Until Element Is Enabled    ${confirmationsupr}
+    Click Button    ${confirmationsupr}
+    FOR    ${row}    IN    @{rows}
+        Run Keyword Unless    '${usernameresultat}'!='${usern}'      Fail    User ${usern} existe encore
+    END
