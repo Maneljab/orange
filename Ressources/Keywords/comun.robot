@@ -4,7 +4,7 @@ Library    OperatingSystem
 Variables    ../Locators/authentificaton.py
 *** Variables ***
 ${url}     https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
-${browser}     Chrome 
+${browser}      Chrome 
 *** Keywords ***
 openpage
     Open Browser    ${url}    ${browser}
