@@ -80,7 +80,7 @@ update
      Wait Until Element Is Visible       //form[@class='oxd-form']//div[@class='oxd-select-text oxd-select-text--active']//div[@class='oxd-select-text-input' and contains(text(), 'ESS')]'
      Execute JavaScript    document.evaluate("//form[@class='oxd-form']//*[@class='oxd-select-text oxd-select-text--active']//*[@class='oxd-select-text-input' and contains(text(), 'ESS')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click();
      Wait Until Element Is Visible     ${userstatut}
-     Select From List By Label      ${userstatut}     ${stat}
+     Select From List By Label      ${userstatut}     ${statutaj}
      Wait Until Element Is Visible    ${employername}
      Input Text    ${employername}     ${employeraj}
      Wait Until Element Is Visible    ${username}
