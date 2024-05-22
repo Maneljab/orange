@@ -4,6 +4,7 @@ Library    Collections
 Library    OperatingSystem
 Variables    ../Locators/user.py
 Variables      ../JDD/recherche.py
+Variables    ../JDD//maj.py
 
 *** Keywords ***
 Reset
@@ -15,7 +16,7 @@ Reset
     Input Text      ${nameemployer}     alalaa
     Wait Until Element Is Visible    ${statutrecherche}
     Select From List By Label    ${statutrecherche}    Enabled
-    Wait Until Element Is Visible    ${userrest}
+    Wait Until Element Is Visible    ${usereset}
     Click Button    ${usereset}
     Should Be Empty    ${nameemployer} 
     Should Be Empty    ${namerecherche} 
@@ -26,7 +27,6 @@ searchname
     Input Text    ${namerecherche}     ${nom}
     Wait Until Element Is Visible    ${usersearch}
     Click Button    ${usersearch}
-   
     Wait Until Page Contains Element     ${usernameresultat}
     Element Should Be Visible    ${usernameresultat}
 searchrole
@@ -67,15 +67,25 @@ suprimer
     ${usern}    Get Text     ${usernameresultat}
     ${userr}    Get Text    ${userroleresultat}
     ${userst}    Get Text    ${staturesultat}
-<<<<<<< HEAD
-    ${emp}      Get Text    ${employerresultat}
-    Wait Until Element Is Visible    ${userdel}
-=======
     ${emp}     Get Text    ${employerresultat}
->>>>>>> 7bc7ce97fae58db6c53df89fcdbfefb5c851bf7b
     Click Button    ${userdel}
     Wait Until Element Is Enabled    ${confirmationsupr}
     Click Button    ${confirmationsupr}
     FOR    ${row}    IN    @{rows}
         Run Keyword Unless    '${usernameresultat}'!='${usern}'      Fail    User ${usern} existe encore
     END
+update
+     Wait Until Element Is Visible     ${maj}
+     Click Button    ${maj}
+     Wait Until Element Is Visible       //form[@class='oxd-form']//div[@class='oxd-select-text oxd-select-text--active']//div[@class='oxd-select-text-input' and contains(text(), 'ESS')]'
+     Execute JavaScript    document.evaluate("//form[@class='oxd-form']//*[@class='oxd-select-text oxd-select-text--active']//*[@class='oxd-select-text-input' and contains(text(), 'ESS')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click();
+     Wait Until Element Is Visible     ${userstatut}
+     Select From List By Label      ${userstatut}     ${stat}
+     Wait Until Element Is Visible    ${employername}
+     Input Text    ${employername}     ${employeraj}
+     Wait Until Element Is Visible    ${username}
+     Input Text    ${username}     ${nomaj}    
+     Click Button    ${usersave}
+     Alert Should Be Present
+
+    
