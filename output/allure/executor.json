@@ -1,0 +1,6 @@
+{
+    "name": "Robot Framework",
+    "type": "robotframework",
+    "command": "python -m robot --listener allure_robotframework --outputdir C:/orange/resultats -i smoke C:/ORANGE/Tests/PageObject.robot"
+  }
+  
